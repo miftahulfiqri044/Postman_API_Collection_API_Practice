@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "b70201ff-ab30-43de-ba04-b39b7b982e16",
+		"_postman_id": "ed19d660-01e1-4ae5-bdb8-8a164d62cde4",
 		"name": "API Practice",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "51351800",
-		"_collection_link": "https://miftahulfiqri044-8528473.postman.co/workspace/Miftahul-Fiqri's-Workspace~a269fb67-f4a7-45a8-84a2-c66b9e183f2f/collection/51351800-b70201ff-ab30-43de-ba04-b39b7b982e16?action=share&source=collection_link&creator=51351800"
+		"_collection_link": "https://miftahulfiqri044-8528473.postman.co/workspace/a269fb67-f4a7-45a8-84a2-c66b9e183f2f/collection/51351800-ed19d660-01e1-4ae5-bdb8-8a164d62cde4?action=share&source=collection_link&creator=51351800"
 	},
 	"item": [
 		{
@@ -80,7 +80,7 @@
 							},
 							"status": "Created",
 							"code": 201,
-							"_postman_previewlanguage": null,
+							"_postman_previewlanguage": "Text",
 							"header": [
 								{
 									"key": "Cache-Control",
@@ -198,7 +198,7 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": null,
+							"_postman_previewlanguage": "Text",
 							"header": [
 								{
 									"key": "Cache-Control",
@@ -249,6 +249,172 @@
 							"body": "{\n    \"success\": true,\n    \"message\": \"Login berhasil\",\n    \"data\": {\n        \"user\": {\n            \"id\": \"bc30e279-245e-4d52-8817-e1cf518002bb\",\n            \"email\": \"hasna@momoyo.com\",\n            \"nama\": \"hasna fatiah\",\n            \"created_at\": \"2026-01-12T09:54:45.921435+00:00\",\n            \"updated_at\": \"2026-01-12T09:54:45.921435+00:00\"\n        },\n        \"token\": \"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiJiYzMwZTI3OS0yNDVlLTRkNTItODgxNy1lMWNmNTE4MDAyYmIiLCJlbWFpbCI6Imhhc25hQG1vbW95by5jb20iLCJuYW1hIjoiaGFzbmEgZmF0aWFoIiwiaWF0IjoxNzY4MjExOTUwLCJleHAiOjE3Njg4MTY3NTB9.TjKrsIEFjeMKPRephAw16ixX6cFvdnSAHey9aQsEgqY\"\n    }\n}"
 						}
 					]
+				},
+				{
+					"name": "Logout User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/auth/logout",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Logout User - Berhasil",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/auth/logout",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"logout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "public, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Jan 2026 11:50:38 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Vercel"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=63072000"
+								},
+								{
+									"key": "Vary",
+									"value": "RSC, Next-Router-State-Tree, Next-Router-Prefetch"
+								},
+								{
+									"key": "X-Matched-Path",
+									"value": "/api/auth/logout"
+								},
+								{
+									"key": "X-Vercel-Cache",
+									"value": "MISS"
+								},
+								{
+									"key": "X-Vercel-Id",
+									"value": "sin1::iad1::hmvqq-1768218638680-f297f516e66f"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Logout berhasil\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Current User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/auth/me",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"me"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -300,7 +466,7 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": null,
+							"_postman_previewlanguage": "Text",
 							"header": [
 								{
 									"key": "Cache-Control",
@@ -349,6 +515,487 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"data\": [\n            {\n                \"id\": \"aa66db1e-2780-442f-ac95-4ef3054f24e3\",\n                \"nama\": \"Ahmad Baihaqi\",\n                \"nis\": \"2892890\",\n                \"kelas\": \"X-IPS-1\",\n                \"jurusan\": \"IPS\",\n                \"email\": null,\n                \"telepon\": null,\n                \"alamat\": null,\n                \"created_by\": \"unknown\",\n                \"created_at\": \"2026-01-12T07:44:55.63978+00:00\",\n                \"updated_at\": \"2026-01-12T07:44:55.63978+00:00\"\n            },\n            {\n                \"id\": \"56aa2120-26a9-4e33-88e4-be3ee107f7cc\",\n                \"nama\": \"ABA\",\n                \"nis\": \"123123123\",\n                \"kelas\": \"XI-IPA-1\",\n                \"jurusan\": \"IPA\",\n                \"email\": \"test@mail.com\",\n                \"telepon\": \"086253462561\",\n                \"alamat\": \"Jl. Tess\",\n                \"created_by\": \"unknown\",\n                \"created_at\": \"2026-01-09T07:11:08.361207+00:00\",\n                \"updated_at\": \"2026-01-11T03:36:38.364925+00:00\"\n            }\n        ],\n        \"pagination\": {\n            \"page\": 1,\n            \"limit\": 10,\n            \"total\": 2,\n            \"totalPages\": 1\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Student by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/siswa/aa66db1e-2780-442f-ac95-4ef3054f24e3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"siswa",
+								"aa66db1e-2780-442f-ac95-4ef3054f24e3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Student by ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/siswa/aa66db1e-2780-442f-ac95-4ef3054f24e3",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"siswa",
+										"aa66db1e-2780-442f-ac95-4ef3054f24e3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "public, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Jan 2026 11:55:40 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Vercel"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=63072000"
+								},
+								{
+									"key": "Vary",
+									"value": "RSC, Next-Router-State-Tree, Next-Router-Prefetch"
+								},
+								{
+									"key": "X-Matched-Path",
+									"value": "/api/siswa/[id]"
+								},
+								{
+									"key": "X-Vercel-Cache",
+									"value": "BYPASS"
+								},
+								{
+									"key": "X-Vercel-Id",
+									"value": "sin1::iad1::hptx5-1768218939541-b387e45db2b1"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": \"aa66db1e-2780-442f-ac95-4ef3054f24e3\",\n        \"nama\": \"Ahmad Baihaqi\",\n        \"nis\": \"2892890\",\n        \"kelas\": \"X-IPS-1\",\n        \"jurusan\": \"IPS\",\n        \"email\": null,\n        \"telepon\": null,\n        \"alamat\": null,\n        \"created_by\": \"unknown\",\n        \"created_at\": \"2026-01-12T07:44:55.63978+00:00\",\n        \"updated_at\": \"2026-01-12T07:44:55.63978+00:00\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Student",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nama\": \"DIMAS\",\r\n  \"nis\": \"2021000023\",\r\n  \"kelas\": \"X-TKJ-1\",\r\n  \"jurusan\": \"Teknik Komputer dan Jaringan\",\r\n  \"email\": \"dimas@tkj.com\",\r\n  \"telepon\": \"081226688448\",\r\n  \"alamat\": \"3 Jl. Raya Ciketing Asem\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/siswa",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"siswa"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Student",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nama\": \"DIMAS\",\r\n  \"nis\": \"2021000023\",\r\n  \"kelas\": \"X-TKJ-1\",\r\n  \"jurusan\": \"Teknik Komputer dan Jaringan\",\r\n  \"email\": \"dimas@tkj.com\",\r\n  \"telepon\": \"081226688448\",\r\n  \"alamat\": \"3 Jl. Raya Ciketing Asem\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/siswa",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"siswa"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "public, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Jan 2026 11:59:18 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Vercel"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=63072000"
+								},
+								{
+									"key": "Vary",
+									"value": "RSC, Next-Router-State-Tree, Next-Router-Prefetch"
+								},
+								{
+									"key": "X-Matched-Path",
+									"value": "/api/siswa"
+								},
+								{
+									"key": "X-Vercel-Cache",
+									"value": "MISS"
+								},
+								{
+									"key": "X-Vercel-Id",
+									"value": "sin1::iad1::vnfhx-1768219156772-aeafe7b2830c"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Siswa berhasil ditambahkan\",\n    \"data\": {\n        \"id\": \"1de5e9f2-ac15-4cc6-9ed8-28f9ae36e3ad\",\n        \"nama\": \"DIMAS\",\n        \"nis\": \"2021000023\",\n        \"kelas\": \"X-TKJ-1\",\n        \"jurusan\": \"Teknik Komputer dan Jaringan\",\n        \"email\": \"dimas@tkj.com\",\n        \"telepon\": \"081226688448\",\n        \"alamat\": \"3 Jl. Raya Ciketing Asem\",\n        \"created_by\": \"unknown\",\n        \"created_at\": \"2026-01-12T11:59:18.062032+00:00\",\n        \"updated_at\": \"2026-01-12T11:59:18.062032+00:00\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Student - New Sempel",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nama\": \"Sutan Periksa\",\r\n  \"nis\": \"2021000022\",\r\n  \"kelas\": \"X-TKJ-1\",\r\n  \"jurusan\": \"Teknik Komputer dan Jaringan\",\r\n  \"email\": \"Sutan@tkj.com\",\r\n  \"telepon\": \"087776792017\",\r\n  \"alamat\": \"3 Jl. Raya Ciketing Asem Bekasi\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/siswa",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"siswa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Student",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nama\": \"DIMAS SAPUTRA\",\r\n  \"nis\": \"2021000023\",\r\n  \"kelas\": \"X-TKJ-1\",\r\n  \"jurusan\": \"Teknik Komputer dan Jaringan\",\r\n  \"email\": \"dimas@tkj.com\",\r\n  \"telepon\": \"081226688448\",\r\n  \"alamat\": \"3 Jl. Raya Ciketing Asem\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/siswa/1de5e9f2-ac15-4cc6-9ed8-28f9ae36e3ad",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"siswa",
+								"1de5e9f2-ac15-4cc6-9ed8-28f9ae36e3ad"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Student",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nama\": \"DIMAS SAPUTRA\",\r\n  \"nis\": \"2021000023\",\r\n  \"kelas\": \"X-TKJ-1\",\r\n  \"jurusan\": \"Teknik Komputer dan Jaringan\",\r\n  \"email\": \"dimas@tkj.com\",\r\n  \"telepon\": \"081226688448\",\r\n  \"alamat\": \"3 Jl. Raya Ciketing Asem\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/siswa/1de5e9f2-ac15-4cc6-9ed8-28f9ae36e3ad",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"siswa",
+										"1de5e9f2-ac15-4cc6-9ed8-28f9ae36e3ad"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "public, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Jan 2026 12:01:30 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Vercel"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=63072000"
+								},
+								{
+									"key": "Vary",
+									"value": "RSC, Next-Router-State-Tree, Next-Router-Prefetch"
+								},
+								{
+									"key": "X-Matched-Path",
+									"value": "/api/siswa/[id]"
+								},
+								{
+									"key": "X-Vercel-Cache",
+									"value": "MISS"
+								},
+								{
+									"key": "X-Vercel-Id",
+									"value": "sin1::iad1::z5pzf-1768219288503-d7259a7c55b0"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Siswa berhasil diupdate\",\n    \"data\": {\n        \"id\": \"1de5e9f2-ac15-4cc6-9ed8-28f9ae36e3ad\",\n        \"nama\": \"DIMAS SAPUTRA\",\n        \"nis\": \"2021000023\",\n        \"kelas\": \"X-TKJ-1\",\n        \"jurusan\": \"Teknik Komputer dan Jaringan\",\n        \"email\": \"dimas@tkj.com\",\n        \"telepon\": \"081226688448\",\n        \"alamat\": \"3 Jl. Raya Ciketing Asem\",\n        \"created_by\": \"unknown\",\n        \"created_at\": \"2026-01-12T11:59:18.062032+00:00\",\n        \"updated_at\": \"2026-01-12T12:01:30.637778+00:00\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Student",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/siswa/1de5e9f2-ac15-4cc6-9ed8-28f9ae36e3ad",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"siswa",
+								"1de5e9f2-ac15-4cc6-9ed8-28f9ae36e3ad"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Student",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/siswa/1de5e9f2-ac15-4cc6-9ed8-28f9ae36e3ad",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"siswa",
+										"1de5e9f2-ac15-4cc6-9ed8-28f9ae36e3ad"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "public, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Jan 2026 12:05:03 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Vercel"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=63072000"
+								},
+								{
+									"key": "Vary",
+									"value": "RSC, Next-Router-State-Tree, Next-Router-Prefetch"
+								},
+								{
+									"key": "X-Matched-Path",
+									"value": "/api/siswa/[id]"
+								},
+								{
+									"key": "X-Vercel-Cache",
+									"value": "MISS"
+								},
+								{
+									"key": "X-Vercel-Id",
+									"value": "sin1::iad1::tctkz-1768219501878-e88a752d2639"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Siswa berhasil dihapus\"\n}"
 						}
 					]
 				}
